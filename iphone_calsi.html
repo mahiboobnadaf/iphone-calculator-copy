@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iphone Calculator</title>
+    <style>
+        *{
+            margin:10;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns:repeat(4,70px);
+            gap:4px;  
+            justify-content: center ;
+            align-items:center;
+            /* text-align: center; */
+            background-color: black;
+            /* display: flex; */
+
+         
+            
+        }
+
+        .container > div {
+        background-color: #8ca0ff;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* text-transform:uppercase; */
+        font-size:20px;
+        font-weight: bold;
+        color: white;
+        background-color:#545151;
+
+        }
+       
+        .zero{
+           grid-column: 1/3;
+            width: 120px !important;
+            height: 50px;
+            border-radius: 1600px !important;
+            display: flex;
+            /* z-index:2; */
+        }
+        .screen{
+            grid-column: 1/5;
+            border: solid 2px black;
+            height: 90px !important;
+            width: 93% !important; 
+            margin-bottom: 5px;
+            border-radius: 0% !important;
+            display: grid;
+            /* justify-items: center !important; */
+            justify-content: flex-end !important;
+            align-items:baseline !important;
+            font-weight: bolder;
+            background-color: black !important;
+            color: white;
+            margin-top: 3px;
+            font-size: 35px !important;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .ac_id, .or_id,.percent_id {
+            background-color:#D7D0D0 !important ;
+            color: black !important;
+
+        }
+        .divid_id,.mul_id,.minus_id,.plus_id,.equals{
+            background-color:darkorange !important ;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="screen"><p class="display">0</p></div>
+        <!-- <audio src="./pop-up.mp3" id="audio"></audio> -->
+
+
+        <div class="ac_id" >AC</div>
+        <div class="or_id" >+/-</div>
+        <div class="percent_id"> &#37</div>
+        <div class="divid_id"> &#247</div>
+        <div class="num" >7</div>
+        <div class="num" >8</div>
+        <div class="num" >9</div>
+        <div class="mul_id" >&#215</div>
+        <div class="num" >4</div>
+        <div class="num" >5</div>
+        <div class="num" >6</div>
+        <div class="minus_id">&#8722</div>
+        <div class="num" >1</div>
+        <div class="num" >2</div>
+        <div class="num" >3</div>
+        <div class="plus_id" >&#43</div>
+        <div class="zero num" >0</div>
+        <div class="dot" onclick="show('.'),audioo()">&#8729</div>
+        <div class="equals" onclick="calculate(),audioo()">&#61</div>
+    </div>
+    <script src="./iphone_calsi.js"></script>
+</body>
+</html>
